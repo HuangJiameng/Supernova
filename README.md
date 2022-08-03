@@ -1,6 +1,3 @@
-# AlgorithmEngineering
-欢迎来到supernova团队算法工程化讨论班的教程仓库（建设中）。
-
 # 安装
 ```bash
 python3 setup.py install
