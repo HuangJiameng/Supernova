@@ -1,5 +1,5 @@
 import argparse
-from dplc.utils import md5_encoding
+from supernova.utils import md5_encoding
 
 def verifyMotto(P: argparse.Namespace):
     name = P.name
