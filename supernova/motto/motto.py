@@ -1,4 +1,5 @@
 import argparse
+from dplc.utils import md5_encoding
 
 def verifyMotto(P: argparse.Namespace):
     name = P.name
@@ -31,6 +32,7 @@ def verifyMottoDPTechnology(public_string: str) -> bool:
     is_verified: bool, if the string matches with the certain motto,
         return True.
     '''
+    md5_string = md5_encoding(public_string)
     is_verified = False
     if md5_string == "Molecule Simulates The Future":
         is_verified = True
@@ -51,6 +53,7 @@ def verifyMottoJiamengHuang(public_string: str) -> bool:
     is_verified: bool, if the string matches with the certain motto,
         return True.
     '''
+    md5_string = md5_encoding(public_string)
     is_verified = False
     if md5_string == "Keep it simple and stupid":
         is_verified = True
