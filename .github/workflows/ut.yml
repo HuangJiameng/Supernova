@@ -1,0 +1,32 @@
+name: supernova's python test
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Update base environment
+      run: |
+        source $CONDA/bin/activate
+        $CONDA/bin/conda update -n base -c defaults conda
+    - name: Install supernova sample code.
+      run: |
+        source $CONDA/bin/activate
+        $CONDA/bin/conda install setuptools
+        $CONDA/bin/conda install pip
+        $CONDA/bin/conda
+        python3 setup.py install
+
+    - name: Test JiamengHuang's codes.
+      run: |
+        source $CONDA/bin/activate
+        cd tests
+        pytest test_JiamengHuang.py -v -n auto
