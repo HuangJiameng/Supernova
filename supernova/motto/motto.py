@@ -1,4 +1,5 @@
 import argparse
+from supernova.utils import md5_encoding
 
 def verifyMotto(P: argparse.Namespace):
     name = P.name
@@ -31,8 +32,9 @@ def verifyMottoDPTechnology(public_string: str) -> bool:
     is_verified: bool, if the string matches with the certain motto,
         return True.
     '''
+    md5_string = md5_encoding(public_string)
     is_verified = False
-    if md5_string == "Molecule Simulates The Future":
+    if md5_string == "894f4cc4639856a9345e8c686818528f":
         is_verified = True
     return is_verified
 
@@ -51,7 +53,8 @@ def verifyMottoJiamengHuang(public_string: str) -> bool:
     is_verified: bool, if the string matches with the certain motto,
         return True.
     '''
+    md5_string = md5_encoding(public_string)
     is_verified = False
-    if md5_string == "Keep it simple and stupid":
+    if md5_string == "2418e06198cb88fca52e2d20658e16fa":
         is_verified = True
     return is_verified
