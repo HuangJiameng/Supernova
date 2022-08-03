@@ -13,7 +13,7 @@ def verifyMotto(P: argparse.Namespace):
         assert RuntimeError("Your input name is not valid for this test!")
 
     if is_verified:
-        print(f"Your input '{motto}' mˇatches with {name}'s motto! ")
+        print(f"Your input '{motto}' matches with {name}'s motto! ")
     else:
         print(f"Your input '{motto}' doesn't match with {name}'s motto! ")
 
