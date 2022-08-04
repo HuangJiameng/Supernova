@@ -1,6 +1,6 @@
 import argparse
 from supernova.utils import md5_encoding
-import supernova.toybox.verifyMottoJiamengHuang
+from supernova.toybox.JiamengHuang import verifyMottoJiamengHuang
 
 def verifyMotto(P: argparse.Namespace):
     name = P.name
