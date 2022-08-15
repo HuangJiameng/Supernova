@@ -27,6 +27,5 @@ jobs:
 
     - name: Test JiamengHuang's codes.
       run: |
-        source $CONDA/bin/activate
         cd tests
         pytest test_JiamengHuang.py -v -n auto
